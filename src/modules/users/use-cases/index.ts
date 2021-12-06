@@ -1,7 +1,7 @@
-import { getCqrsHandlers } from '@common/utils/cqrs.util'
+import { transformExportsInList } from '@common/utils'
 
 export * from './get-user-by-id'
 export * from './login'
 export * from './sign-up'
 
-export const UseCasesList = getCqrsHandlers(exports, 'useCase')
+export const UseCasesList = transformExportsInList(exports)
