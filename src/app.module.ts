@@ -7,9 +7,10 @@ import { TransformInterceptor } from '@common/interceptors'
 import { PrismaModule } from '@modules/prisma'
 import { UserModule } from '@modules/users'
 import { GlobalConfigModule } from '@modules/global-configs'
+import { ReminderModule } from '@modules/reminders'
 
 @Module({
-  imports: [GlobalConfigModule, PrismaModule, UserModule],
+  imports: [GlobalConfigModule, PrismaModule, UserModule, ReminderModule],
   providers: [
     {
       provide: APP_FILTER,
