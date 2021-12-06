@@ -9,8 +9,8 @@ export class User extends Entity {
   email: string
 
   @ApiProperty()
-  photoUrl?: string
+  password: string
 
   @ApiProperty()
-  password: string
+  location: string
 }
