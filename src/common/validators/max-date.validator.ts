@@ -2,7 +2,7 @@ import { buildMessage, maxDate, ValidateBy, ValidationOptions } from 'class-vali
 import { format } from 'date-fns'
 
 export function MaxDate(
-  getDate: (object: any, value: any) => Date | undefined,
+  getDate: (object: any, value: any) => Date,
   validationOptions?: ValidationOptions
 ) {
   return ValidateBy(
@@ -18,7 +18,7 @@ export function MaxDate(
         defaultMessage: buildMessage(
           (eachPrefix, args) =>
             `${eachPrefix}$property is after ${format(
-              getDate(args?.object, args?.value) as Date,
+              getDate(args?.object, args?.value),
               'yyyy-MM-dd'
             )}`,
           validationOptions
