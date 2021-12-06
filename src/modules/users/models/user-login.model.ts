@@ -3,7 +3,7 @@ import { Type } from 'class-transformer'
 import { User } from './user.model'
 
 export class UserLogin {
-  @ApiProperty()
+  @ApiProperty({ description: 'Token para ser inserido no authorization header' })
   token: string
 
   @ApiProperty()

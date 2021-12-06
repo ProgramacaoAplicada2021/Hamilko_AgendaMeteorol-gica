@@ -9,13 +9,17 @@ export class AuthController {
   constructor(private readonly userService: UserService) {}
 
   @Post('signup')
-  @ApiResponse({ type: UserLogin, status: HttpStatus.CREATED })
+  @ApiResponse({
+    type: UserLogin,
+    status: HttpStatus.CREATED,
+    description: 'Rota para fazer o cadastro de um usuário'
+  })
   signUp(@Body() input: SignUpDto) {
     return this.userService.signUp(input)
   }
 
   @Post('login')
-  @ApiResponse({ type: UserLogin, status: HttpStatus.OK })
+  @ApiResponse({ type: UserLogin, status: HttpStatus.OK, description: 'Rota para fazer o login' })
   @HttpCode(HttpStatus.OK)
   login(@Body() input: LoginDto) {
     return this.userService.login(input)

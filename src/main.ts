@@ -8,7 +8,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     cors: true
   })
-  const options = new DocumentBuilder().setTitle('Users docs').setVersion('1.0').build()
+  const options = new DocumentBuilder().setTitle('Agenda weather').setVersion('1.0').build()
   const document = SwaggerModule.createDocument(app, options)
   SwaggerModule.setup('docs', app, document)
 
