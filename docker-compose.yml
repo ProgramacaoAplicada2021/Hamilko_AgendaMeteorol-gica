@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: agenda-weather-api
+    image: agenda-weather-api
+    ports:
+      - '4000:4000'
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - 'app-network'
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/agenda-weather-api?schema=public
+
+  db:
+    image: postgres:latest
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - '5430:5432'
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+    networks:
+      - 'app-network'
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres-data:

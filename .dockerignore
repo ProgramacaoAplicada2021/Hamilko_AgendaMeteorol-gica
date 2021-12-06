@@ -1,0 +1,10 @@
+node_modules
+*.log
+dist
+*.tsbuildinfo
+.dockerignore
+Dockerfile
+.git
+.gitignore
+docker-compose*
+.docker/.yarn-cache
