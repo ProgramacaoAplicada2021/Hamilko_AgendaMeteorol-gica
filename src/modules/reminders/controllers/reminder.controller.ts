@@ -1,4 +1,4 @@
-import { Body, Controller, HttpStatus, Post } from '@nestjs/common'
+import { Body, Controller, Get, HttpStatus, Post } from '@nestjs/common'
 import { ApiResponse } from '@nestjs/swagger'
 import { AUTHENTICATION_REQUIRED } from '@common/constants'
 import { AuthUser, RequiresUserAuth } from '@common/decorators'
@@ -24,5 +24,17 @@ export class ReminderController {
     @AuthUser() user: JUser
   ): Promise<Reminder> {
     return this.reminderService.createReminder(input, user.id)
+  }
+
+  @Get()
+  @RequiresUserAuth()
+  @ApiResponse({
+    status: HttpStatus.OK,
+    type: [Reminder],
+    description: 'Get all reminders from user',
+    ...AUTHENTICATION_REQUIRED
+  })
+  async getReminders(@AuthUser() user: JUser): Promise<Reminder[]> {
+    return this.reminderService.getAllReminders(user.id)
   }
 }

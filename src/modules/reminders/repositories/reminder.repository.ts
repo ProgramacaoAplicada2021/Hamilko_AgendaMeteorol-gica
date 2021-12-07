@@ -15,4 +15,11 @@ export class ReminderRepository extends BaseRepositoryPrisma<Reminder, 'reminder
     })
     return this.format(reminder)
   }
+
+  async getAllRemindersFromUser(userId: string): Promise<Reminder[]> {
+    const reminders = await this.prismaService.reminder.findMany({
+      where: { userId }
+    })
+    return this.formatMany(reminders)
+  }
 }
