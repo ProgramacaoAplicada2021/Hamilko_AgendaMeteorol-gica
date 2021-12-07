@@ -29,5 +29,5 @@ export class CreateReminderDto {
   })
   @IsString()
   @IsOptional()
-  location: string
+  location?: string
 }
