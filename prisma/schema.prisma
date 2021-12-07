@@ -33,5 +33,6 @@ model Reminder {
   user   User   @relation(fields: [userId], references: [id])
   userId String @map("user_id")
 
+  @@index([userId])
   @@map("reminders")
 }
