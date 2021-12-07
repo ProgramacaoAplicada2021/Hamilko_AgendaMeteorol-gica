@@ -8,3 +8,6 @@ export const AUTHENTICATION_REQUIRED: { headers: HeadersObject } = {
     }
   }
 }
+
+export const TOKEN_EXAMPLE =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZThmOGY4Zi04ZjhmLThmOGYtOGY4Zi04ZjhmOGY4ZjhmOGYiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE1MTYyMzkwMjIsImlkIjoiNWU4ZjhmOGYtOGY4Zi04ZjhmLThmOGYtOGY4ZjhmOGY4ZjhmIiwicm9sZSI6IlVTRVIiLCJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20ifQ.DdCbi3RAgC91z4A2qXVant33FrIsr3O1XmPogoznqa4'
