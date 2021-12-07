@@ -22,4 +22,11 @@ export class ReminderRepository extends BaseRepositoryPrisma<Reminder, 'reminder
     })
     return this.formatMany(reminders)
   }
+
+  async getNextRemindersFromUser(userId: string): Promise<Reminder[]> {
+    const reminders = await this.prismaService.reminder.findMany({
+      where: { userId, date: { gte: new Date() } }
+    })
+    return this.formatMany(reminders)
+  }
 }

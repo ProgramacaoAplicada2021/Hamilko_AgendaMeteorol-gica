@@ -16,7 +16,7 @@ export class ReminderController {
   @ApiResponse({
     status: HttpStatus.CREATED,
     type: Reminder,
-    description: 'Create reminder',
+    description: 'Criar um compromisso',
     ...AUTHENTICATION_REQUIRED
   })
   async createReminder(
@@ -31,10 +31,22 @@ export class ReminderController {
   @ApiResponse({
     status: HttpStatus.OK,
     type: [Reminder],
-    description: 'Get all reminders from user',
+    description: 'Listar todos os compromissos do usuário',
     ...AUTHENTICATION_REQUIRED
   })
   async getReminders(@AuthUser() user: JUser): Promise<Reminder[]> {
     return this.reminderService.getAllReminders(user.id)
+  }
+
+  @Get('next')
+  @RequiresUserAuth()
+  @ApiResponse({
+    status: HttpStatus.OK,
+    type: [Reminder],
+    description: 'Listar todos os próximos compromissos do usuário',
+    ...AUTHENTICATION_REQUIRED
+  })
+  async getNextReminders(@AuthUser() user: JUser): Promise<Reminder[]> {
+    return this.reminderService.getNextReminders(user.id)
   }
 }

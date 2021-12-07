@@ -15,6 +15,7 @@
 - Verificar previsão do tempo em um dia
 - Criar compromisso
 - Listar compromissos
+- Listar próximos compromissos
 - Alterar compromisso
 - Deletar compromisso
 
