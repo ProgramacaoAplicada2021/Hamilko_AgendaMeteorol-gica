@@ -1,5 +1,14 @@
 ## Descrição
 
+**Trabalho:** PROPOSTA DE PROJETO AL EDUARDO CORREA HAMILKO 19015 3° ANO COMUNICAÇÕES
+
+**Proposta:** Agenda Metereológica
+
+**Função:** Uma agenda que possui a função previsão de tempo e temperatura durante os próximos dias.
+
+**Motivação:** Atualmente, a agenda das pessoas é muito dependente do clima. Quem nunca se arrependeu de não levar um guarda-chuva ou uma blusa para alguma ocasião, ou então, chegou na praia e viu que o tempo está fechado? Para se programar, muitas vezes, acabamos esquecendo de levar em consideração o fator clima... uma agenda que utilize de fontes confiáveis de previsão de tempo pode ser muito útil para ajudar as pessoas a se programarem melhor no seu dia a dia.
+
+
 **Funcionalidades**
 - Cadastrar
 - Logar
