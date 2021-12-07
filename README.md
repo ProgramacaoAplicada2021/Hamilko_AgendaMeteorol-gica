@@ -49,4 +49,4 @@ $ yarn dev
 
 Iniciará o servidor por padrão na porta 4000, podendo ser acessado com http://localhost:4000
 
-Documentação da API com Swagger está em http://localhost:4000/api
+Documentação da API com Swagger está em http://localhost:4000/docs
