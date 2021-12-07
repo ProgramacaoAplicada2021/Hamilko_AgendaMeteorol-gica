@@ -25,9 +25,8 @@ export class SignUpDto {
 
   @ApiProperty({
     description: 'O local padrão que será usado, caso não seja informado quando criar o compromisso',
-    example: '2021-11-12 16:00',
-    format: 'YYYY-MM-DD HH:mm',
-    default: 'O local inserido no cadastro'
+    example: 'Curitiba, Paraná, Brasil',
+    format: 'Cidade, Estado, País'
   })
   @IsString()
   location: string
