@@ -13,4 +13,13 @@ export class Reminder extends Entity {
 
   @ApiProperty({ example: '5e8f8f8f-8f8f-8f8f-8f8f-8f8f8f8f8f8f' })
   userId: string
+
+  @ApiProperty({ example: 24.5, description: 'Temperatura média do dia' })
+  temp: number
+
+  @ApiProperty({ example: 22, description: 'Temperatura mínima do dia' })
+  minTemp: number
+
+  @ApiProperty({ example: 27, description: 'Temperatura máxima do dia' })
+  maxTemp: number
 }
