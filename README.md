@@ -16,8 +16,6 @@
 - Criar compromisso
 - Listar compromissos
 - Listar próximos compromissos
-- Alterar compromisso
-- Deletar compromisso
 
 **Tecnologias**
 - NodeJS

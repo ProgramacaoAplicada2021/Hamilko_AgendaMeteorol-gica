@@ -3,4 +3,7 @@ export interface CreateReminderInput {
   date: Date
   location: string
   userId: string
+  temp: number
+  minTemp: number
+  maxTemp: number
 }
